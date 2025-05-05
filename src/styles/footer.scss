@@ -1,0 +1,25 @@
+
+.background-footer
+{
+    background-color: black;
+    height: 209px;
+    color: white;
+    display: flex;
+}
+
+.contenu-footer
+{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    margin: 90px auto 50px auto;
+}
+
+.logo-footer
+{
+    height: 32px;
+}
