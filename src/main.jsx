@@ -7,6 +7,7 @@ import APropos from './pages/APropos'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Error'
+import FicheLogement from './pages/Fiche-Logement'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode c>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/logement/:id' element={<FicheLogement />} />
         <Route path='/APropos' element={<APropos />} />
         <Route path='*' element={<Error />} />
       </Routes>
