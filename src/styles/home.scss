@@ -9,7 +9,7 @@
     align-items: center;
     font-size: 48px;
     width: 90%;
-    margin: auto;
+    margin: 0px auto 30px auto;
     border-radius: 25px;
     color: white;
     font-size: 40px;
@@ -21,4 +21,20 @@
     background-color: #F6F6F6;
     margin: auto;
     border-radius: 25px;
+}
+
+@media (max-width: 376px)
+{
+    .background-titre
+    {
+        font-size: 24px;
+        height: 111px;
+        margin: 0px auto 20px auto;
+    }
+
+    .gallery
+    {
+        background: none;
+        width: 100%;
+    }
 }

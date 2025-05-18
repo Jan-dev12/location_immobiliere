@@ -5,6 +5,7 @@
     height: 209px;
     color: white;
     display: flex;
+    margin: 30px auto 0px auto;
 }
 
 .contenu-footer
@@ -16,10 +17,26 @@
     flex-direction: column;
     gap: 20px;
     font-size: 24px;
-    margin: 90px auto 50px auto;
+    margin: 80px auto 50px auto;
 }
 
 .logo-footer
 {
     height: 32px;
+}
+
+@media (max-width: 376px)
+{
+    .contenu-footer
+    {
+        margin: auto;
+        gap: 0;
+    }
+
+    .contenu-footer p
+    {
+        font-size: 12px;
+        width: 25%;
+        margin: auto;
+    }
 }

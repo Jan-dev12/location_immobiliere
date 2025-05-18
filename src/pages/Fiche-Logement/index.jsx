@@ -1,21 +1,33 @@
 import data from '../../datas/datas.json'
-import { useParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import '../../styles/fichelogement.scss'
 import Collapse from '../../components/Collapse'
 import RatingStars from '../../components/RatingStars'
 
-function FicheLogement()
-{
-    const { id } = useParams() // récupère l'id dans l'URL
+function FicheLogement() {
+    const { id } = useParams()
+    const navigate = useNavigate()
     const logement = data.find(item => item.id === id)
 
     const [currentIndex, setCurrentIndex] = useState(0)
+
+    useEffect(() => {
+        if (!logement) {
+            navigate('/Error')
+        }
+    }, [logement, navigate])
+
+    //Empêche le rendu si logement est undefined
+    if (!logement) {
+        return null
+    }
+
     const pictures = logement.pictures
 
     const goToNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length)
-        }
+    }
 
     const goToPrev = () => {
         setCurrentIndex((prevIndex) =>
@@ -23,11 +35,7 @@ function FicheLogement()
         )
     }
 
-    if (!logement) {
-        return <h2>Logement non trouvé</h2>
-    }
-
-    return (
+ return (
         <div className='logement-image'>
             <div className="carousel">
                 <button className='gauche' onClick={goToPrev}>‹</button>
@@ -52,7 +60,7 @@ function FicheLogement()
                         ))}
                     </div>
                 </div>
-                <div>
+                <div className='logement-host'>
                     <div className='host'>
                         <p>{logement.host.name}</p>
                         <img className='photo-host' src={logement.host.picture} alt="photo-host" />
@@ -61,14 +69,26 @@ function FicheLogement()
                 </div>
             </div>
             <div className='infos'>
-                <Collapse 
-                title='description'
-                content={logement.description}
+                <div>
+                    <Collapse 
+                    title='description'
+                    content={logement.description}
+                    />
+                </div>
+                <div>
+                <Collapse className='test'
+                    title='equipement'
+                    content={
+                        Array.isArray(logement.equipments) && logement.equipments.length > 0 ? (
+                        logement.equipments.map((item, index) => (
+                            <p key={index}>{item}</p>
+                        ))
+                        ) : (
+                        <p>Aucun équipement renseigné.</p>
+                        )
+                    }
                 />
-                <Collapse 
-                title='equipement'
-                content={logement.equipments}
-                />
+                </div>
             </div>
         </div>
     )

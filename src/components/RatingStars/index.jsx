@@ -1,5 +1,6 @@
 import fullstar from '../../assets/fullstar.png'
 import emptystar from '../../assets/emptystar.png'
+import '../../styles/ratingstars.scss'
 
 function RatingStars({rating})
 {
