@@ -1,11 +1,14 @@
+@use './setting.scss' as *;
+
 .header
 {
     display: flex;
     justify-content: space-between;
     height: 68px;
-    width: 90%;
+    width: $format-page;
     margin: auto;
     align-items: center;
+    font-family: $font-main;
 }
 
 .navigation 

@@ -69,13 +69,13 @@ function FicheLogement() {
                 </div>
             </div>
             <div className='infos'>
-                <div>
+                <div className='infos-equipement&description'>
                     <Collapse 
                     title='description'
                     content={logement.description}
                     />
                 </div>
-                <div>
+                <div className='infos-equipement-description'>
                 <Collapse className='test'
                     title='equipement'
                     content={

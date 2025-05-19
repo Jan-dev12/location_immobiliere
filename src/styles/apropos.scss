@@ -1,3 +1,10 @@
+@use './setting.scss' as *;
+
+.contenu-apropos
+{
+    font-family: $font-main;
+}
+
 .background-apropos-titre
 {
     background-image: url(/src/assets/Background-titre2.png);

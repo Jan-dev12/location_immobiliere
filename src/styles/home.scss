@@ -1,3 +1,10 @@
+@use './setting.scss' as *;
+
+.contenu
+{
+    font-family: $font-main;
+}
+
 .background-titre
 {
     background-image: url(/src/assets/Background-titre.png);
@@ -8,16 +15,15 @@
     justify-content: center;
     align-items: center;
     font-size: 48px;
-    width: 90%;
+    width: $format-page;
     margin: 0px auto 30px auto;
     border-radius: 25px;
     color: white;
-    font-size: 40px;
 }
 
 .gallery
 {
-    width: 90%;
+    width: $format-page;
     background-color: #F6F6F6;
     margin: auto;
     border-radius: 25px;

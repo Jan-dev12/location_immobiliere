@@ -4,7 +4,7 @@ import Card from '../../components/Card'
 function App() 
 {
     return (
-        <div>
+        <div className='contenu'>
             <h1 className='background-titre'>Chez vous, partout et ailleurs</h1>
             <div className='gallery'>
                 <Card />

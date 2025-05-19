@@ -1,8 +1,9 @@
 .logement-image
 {
     text-align: center;
-    width: 90%;
+    width: $format-page;
     margin: auto;
+    font-family: $font-main;
 }
 
 .carousel 
@@ -45,7 +46,7 @@
 
 .tag
 {
-  background-color: #FF6060;
+  background-color: $primary-color;
   color: white;
   border-radius: 25px;
   margin-right: 10px;
@@ -76,7 +77,7 @@
 
 .logement-contenu h2
 {
-  color: #FF6060;
+  color: $primary-color;
   font-size: 30px;
   text-align: start;
   font-weight: normal;
@@ -104,7 +105,7 @@
 .host p
 {
   font-size: 18px;
-  color: #FF6060;
+  color: $primary-color;
   width: 45%;
 }
 
@@ -115,9 +116,9 @@
   margin: 20px 0px 50px 0px;
 }
 
-.infos div
+.infos-equipement-description
 {
-  width: 100%;
+  width: 100%
 }
 
 .test

@@ -14,11 +14,10 @@ function Collapse({title, content})
                 <span className={`arrow ${isOpen ? 'open' : ''}`}><img src={fleche} alt='fleche'/></span>
             </button>
 
-            {isOpen && (
-                <p className="dropdown-list">
-                    {content}
-                </p>
-            )}
+            
+            <div className={`dropdown-list ${isOpen ? 'open' : ''}`}>
+                {content}
+            </div>
         </div>
     )
 }

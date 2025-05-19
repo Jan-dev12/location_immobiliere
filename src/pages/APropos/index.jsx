@@ -5,7 +5,7 @@ function APropos()
 {
 
     return (
-        <div>
+        <div className='contenu'>
             <h2 className='background-apropos-titre'>Page de a propos</h2>
             <div className='contenu-apropos'>
                <Collapse 

@@ -1,3 +1,4 @@
+@use './setting.scss' as *;
 
 .background-footer
 {
@@ -6,6 +7,7 @@
     color: white;
     display: flex;
     margin: 30px auto 0px auto;
+    font-family: $font-main;
 }
 
 .contenu-footer
